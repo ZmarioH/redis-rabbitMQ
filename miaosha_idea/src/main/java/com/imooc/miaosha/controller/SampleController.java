@@ -55,9 +55,9 @@ public class SampleController {
         User user = new User();
         user.setId(1L);
         user.setName("zhuhao");
-        boolean flag = redisService.set(UserKey.getById,""+1,user );
+        redisService.set(UserKey.getById,""+1,user );
 //        String str = redisService.get("key2", String.class);
-        return Result.success(true );
+        return Result.success(true);
     }
 
 }

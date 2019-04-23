@@ -14,13 +14,13 @@ public class RedisFactory {
     RedisConfig redisConfig;
 
     @Bean
-    public JedisPool JedisPoolFactory(){
+    public JedisPool JedisPoolFactory() {
         JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
         jedisPoolConfig.setMaxIdle(redisConfig.getPoolMaxIdle());
         jedisPoolConfig.setMaxTotal(redisConfig.getPoolMaxTotal());
-        jedisPoolConfig.setMaxWaitMillis(redisConfig.getMaxWait()*1000);
-        JedisPool jedisPool = new JedisPool(jedisPoolConfig,redisConfig.getHost(),redisConfig.getPort(),redisConfig.getTimeOut()*1000,
-                redisConfig.getPassword(),0);
+        jedisPoolConfig.setMaxWaitMillis(redisConfig.getMaxWait() * 1000);
+        JedisPool jedisPool = new JedisPool(jedisPoolConfig, redisConfig.getHost(), redisConfig.getPort(), redisConfig.getTimeOut() * 1000,
+                redisConfig.getPassword(), 0);
 
         return jedisPool;
     }

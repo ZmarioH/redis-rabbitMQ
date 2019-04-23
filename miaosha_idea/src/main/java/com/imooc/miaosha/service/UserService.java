@@ -11,7 +11,7 @@ public class UserService {
     UserDao userDao;
 
     public User getById(Long id){
-        User user = userDao.getById(id);
-        return user;
+
+        return  userDao.getById(id);
     }
 }
