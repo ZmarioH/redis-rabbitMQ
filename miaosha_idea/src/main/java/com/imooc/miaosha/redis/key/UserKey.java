@@ -1,10 +1,11 @@
-package com.imooc.miaosha.redis.Key;
+package com.imooc.miaosha.redis.key;
 
 import com.imooc.miaosha.redis.BasePrefix;
 
 
-/*
+/**
 * 用户模块key前缀
+ * @author zhuhao
 * */
 public class UserKey extends BasePrefix {
 

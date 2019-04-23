@@ -13,8 +13,8 @@ public class RedisService {
     @Autowired
     JedisPool jedisPool;
 
-    /*获取单个对象*/
-    public <T> T get(KeyPrefix prefix,String key, Class<T> claszz)
+    /**获取单个对象*/
+    public <T> T get(KeyPrefix prefix,String key, Class<T> clazz)
     {
         Jedis jedis = null;
         try {
@@ -22,14 +22,14 @@ public class RedisService {
             //生成真正的Key
             String realKey = prefix.getPrefix() + key;
             String str = jedis.get(realKey);
-            T t = stringToBean(str,claszz);
+            T t = stringToBean(str,clazz);
             return t;
         }finally {
             returnToPool(jedis);
         }
     }
 
-    /*获取对象*/
+    /**获取对象*/
     public <T> boolean set(KeyPrefix prefix,String key, T value)
     {
         Jedis jedis = null;
@@ -51,7 +51,7 @@ public class RedisService {
         }
     }
 
-    /*判断是否存在*/
+    /**判断是否存在*/
     public <T> boolean exits(KeyPrefix prefix,String key)
     {
         Jedis jedis = null;
@@ -65,7 +65,7 @@ public class RedisService {
         }
     }
 
-    /*增加量*/
+    /**增加量*/
     public <T> Long incr(KeyPrefix prefix,String key)
     {
         Jedis jedis = null;
@@ -79,7 +79,7 @@ public class RedisService {
         }
     }
 
-    /*减少量*/
+    /**减少量*/
     public <T> Long decr(KeyPrefix prefix,String key)
     {
         Jedis jedis = null;
@@ -93,7 +93,7 @@ public class RedisService {
         }
     }
 
-    /*
+    /**
     * 类型转字符串
     * 剩余其他类型待完善
     * */
@@ -116,7 +116,7 @@ public class RedisService {
 
     }
 
-    /*
+    /**
     * 字符串转对应类型
     * */
     private <T> T stringToBean(String str,Class<T> clazz) {

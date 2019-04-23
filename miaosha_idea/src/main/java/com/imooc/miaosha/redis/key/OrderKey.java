@@ -1,4 +1,4 @@
-package com.imooc.miaosha.redis.Key;
+package com.imooc.miaosha.redis.key;
 
 import com.imooc.miaosha.redis.BasePrefix;
 

@@ -5,6 +5,11 @@ import com.imooc.miaosha.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * UserService class
+ *
+ * @author zhuao
+ */
 @Service
 public class UserService {
     @Autowired

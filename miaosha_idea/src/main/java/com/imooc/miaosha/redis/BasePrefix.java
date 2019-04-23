@@ -1,6 +1,9 @@
 package com.imooc.miaosha.redis;
 
-
+/**
+ * BasePrefix class
+ * @author zhuhao
+ */
 public abstract class BasePrefix implements KeyPrefix {
 
     private int expireSeconds;

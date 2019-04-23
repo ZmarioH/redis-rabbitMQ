@@ -4,7 +4,11 @@ package com.imooc.miaosha.redis;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-
+/**
+ * RedisConfig class
+ *
+ * @author zhuhao
+ */
 @Component
 @ConfigurationProperties(prefix="redis")
 public class RedisConfig {
